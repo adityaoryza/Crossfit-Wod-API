@@ -4,29 +4,29 @@ The Crossfit Wod API is an open-source project that provides a simple API for ac
 
 To use the Crossfit Wod API, you will need to have Node.js installed on your computer. Once you have Node.js installed, you can install the Crossfit Wod API by cloning the repository from Github and installing the dependencies.
 
-    Clone the repository:
+Clone the repository:
 
-bash
+    bash
 
-git clone https://github.com/adityaoryza/Crossfit-Wod-API.git
+    git clone https://github.com/adityaoryza/Crossfit-Wod-API.git
 
-    Navigate to the project directory:
+Navigate to the project directory:
 
-bash
+    bash
 
-cd Crossfit-Wod-API
+    cd Crossfit-Wod-API
 
-    Install the dependencies:
+Install the dependencies:
 
-npm install
+    npm install
 
 ## Usage:
 
 To start the server, run the following command:
 
-sql
+    sql
 
-npm start
+    npm start
 
 The server will start listening on port 3000 by default. You can access the API by making requests to http://localhost:3000/api/workouts.
 
@@ -38,11 +38,11 @@ The Crossfit Wod API provides the following endpoints:
 
 Example usage:
 
-    To get all Workouts Data:
+To get all Workouts Data:
 
-bash
+    bash
 
-GET http://localhost:3000/api/workuts/
+    GET http://localhost:3000/api/workuts/
 
 Response:
 
@@ -55,11 +55,11 @@ swift
 "score_type": "Rounds and Reps"
 }
 
-    To get onli five workouts:
+To get onli five workouts:
 
-bash
+    bash
 
-GET localhost:3000/api/v1/workouts?length=5
+    GET localhost:3000/api/v1/workouts?length=5
 
 Response:
 
