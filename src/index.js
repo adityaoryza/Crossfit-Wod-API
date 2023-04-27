@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 const apicache = require("apicache");
 // routes v1 workouts
 const v1WorkoutRouter = require("./v1/routes/workoutRoutes");
+// API documentation
+const { swaggerDocs: V1SwaggerDocs } = require("./v1/swagger");
 
 const app = express();
 const cache = apicache.middleware;
@@ -17,4 +19,6 @@ app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
+  // API documentation
+  V1SwaggerDocs(app, PORT);
 });
