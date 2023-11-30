@@ -1,5 +1,7 @@
 The Crossfit Wod API is an open-source project that provides a simple API for accessing Crossfit workout of the day (WOD) information. The project is hosted on Github and is available under the MIT license.
 
+## Postman Documentation:
+    https://documenter.getpostman.com/view/24306967/2s9YeHZqMD
 ## Installation:
 
 To use the Crossfit Wod API, you will need to have Node.js installed on your computer. Once you have Node.js installed, you can install the Crossfit Wod API by cloning the repository from Github and installing the dependencies.
