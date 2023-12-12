@@ -19,6 +19,7 @@ app.use("/api/v1/workouts", v1WorkoutRouter);
 
 app.listen(PORT, () => {
   console.log(`listening on port ${PORT}`);
+  console.log(`server running on http://localhost:${PORT}/api/v1/workouts`);
   // API documentation
   V1SwaggerDocs(app, PORT);
 });
