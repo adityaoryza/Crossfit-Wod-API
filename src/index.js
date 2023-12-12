@@ -2,6 +2,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
+// security
+const helmet = require("helmet");
+
 // caching
 const apicache = require("apicache");
 // routes v1 workouts
@@ -14,6 +17,18 @@ const cache = apicache.middleware;
 const PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
+app.use(
+  helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: ["'self'"],
+      scriptSrc: ["'self'", "https://www.google.com"],
+      styleSrc: ["'self'"],
+      imgSrc: ["'self'"],
+      fontSrc: ["'self'"],
+      frameSrc: ["'self'"],
+    },
+  })
+);
 // app.use(cache("2 minutes"));
 app.use("/api/v1/workouts", v1WorkoutRouter);
 
